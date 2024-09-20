@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Contact form</title>
+
+    <!-- React and ReactDOM from CDN -->
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <!-- Babel for transforming JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Karla:wght@200..800&display=swap");
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const App = () => {
+        const [formState, setFormState] = React.useState();
+        return (
+          <div className="container">
+            <div className="form-container">
+              <p className="title">Contact Us</p>
+
+              <form>
+                <div className="name-container">
+                  <div className="form-element">
+                    <label className="label" id="first-name">First Name</label>
+                    <input type="text" className="input" />
+                    <p className="error">This field is required</p>
+                  </div>
+
+                  
+
+                  <div className="form-element">
+                    <label className="label">Last Name</label>
+                    <input type="text" className="input" />
+                    <p className="error">This field is required</p>
+                  </div>
+                </div>
+
+                <div className="form-element">
+                  <label className="label">Email Address</label>
+                  <input type="text" className="input" />
+                  <p className="error">Please enter a valid email address</p>
+                  <p className="error">This field is required</p>
+                </div>
+
+                <div className="form-element">
+                  <label className="label">Query Type</label>
+
+                  <div className="radio-group">
+                    <label className="radio-option">
+                      <input
+                        type="radio"
+                        name="query-type"
+                        value="General-Enquiry"
+                      />
+                      General Enquiry
+                    </label>
+
+                    <label className="radio-option">
+                      <input
+                        type="radio"
+                        name="query-type"
+                        value="Support-Request"
+                      />
+                      Support Request
+                    </label>
+                  </div>
+                  <p className="error">Please select a query type</p>
+                </div>
+                
+                <div className="form-element">
+                  <label>Message</label>
+                  <textarea id="" name="" rows="6" cols="50" />
+                  <p className="error">This field is required</p>
+                </div>
+                
+
+                <div className="form-element">
+                  <div className="checkbox-container">
+                  <input type="checkbox" id="consent" name="consent" />
+                  <label>I consent to being contacted by the team</label>
+                  </div>
+                  <p className="error">
+                  To submit this form, please consent to being contacted
+                </p>
+                </div>
+                
+              </form>
+
+              <button type="button">Submit</button>
+
+              <div className="success-container">
+                <div className="success-message">
+                  <img src="assets/images/icon-success-check.svg" alt="tick-icon" />
+                <p>Message Sent!</p>
+                <p>Thanks for completing the form. We'll be in touch soon!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      };
+
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="https://www.sherilu.com/">Sheri Lu</a>.
+    </div>
+  </body>
+</html>
