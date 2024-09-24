@@ -193,11 +193,12 @@ button {
   height: 50px;
   margin: 10px 0px;
   background-color: var(--primary-green-600);
-  border-radius: 5px;
+  border-radius: 10px;
   border: none;
   color: var(--neutral-white);
   cursor: pointer;
   font-size: 16px;
+  font-weight: 700;
 }
 
 button:hover {
