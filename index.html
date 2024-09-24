@@ -21,83 +21,119 @@
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="form-container">
-        <p class="title">Contact Us</p>
+    <main>
+      <div class="container">
+        <div class="form-container">
+          <h1 class="title">Contact Us</h1>
 
-        <form id="contact-form">
-          <div class="name-container">
-            <div class="form-element">
-              <label class="label" id="first-name">First Name</label>
-              <input type="text" class="input" id="first-name-input" />
-              <p class="error" id="first-name-error">This field is required</p>
+          <form id="contact-form">
+            <div class="name-container">
+              <div class="form-element">
+                <label class="label" id="first-name" for="first-name-input"
+                  >First Name</label
+                >
+                <input
+                  type="text"
+                  class="input"
+                  id="first-name-input"
+                  label="first-name-input"
+                />
+                <p class="error" id="first-name-error">
+                  This field is required
+                </p>
+              </div>
+
+              <div class="form-element">
+                <label class="label" for="last-name-input">Last Name</label>
+                <input type="text" class="input" id="last-name-input" />
+                <p class="error" id="last-name-error">This field is required</p>
+              </div>
             </div>
 
             <div class="form-element">
-              <label class="label">Last Name</label>
-              <input type="text" class="input" id="last-name-input" />
-              <p class="error" id="last-name-error">This field is required</p>
+              <label class="label" for="email-input">Email Address</label>
+              <input type="email" class="input" id="email-input" />
+              <p class="error" id="email-error">
+                Please enter a valid email address
+              </p>
             </div>
-          </div>
 
-          <div class="form-element">
-            <label class="label">Email Address</label>
-            <input type="email" class="input" id="email-input" />
-            <p class="error" id="email-error">Please enter a valid email address</p>
-          </div>
+            <div class="form-element">
+              <label class="label">Query Type</label>
 
-          <div class="form-element">
-            <label class="label">Query Type</label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="query-type"
+                    value="General-Enquiry"
+                  />
+                  General Enquiry
+                </label>
 
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="query-type" value="General-Enquiry" />
-                General Enquiry
-              </label>
-
-              <label class="radio-option">
-                <input type="radio" name="query-type" value="Support-Request" />
-                Support Request
-              </label>
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="query-type"
+                    value="Support-Request"
+                  />
+                  Support Request
+                </label>
+              </div>
+              <p class="error" id="query-type-error">
+                Please select a query type
+              </p>
             </div>
-            <p class="error" id="query-type-error">Please select a query type</p>
-          </div>
 
-          <div class="form-element">
-            <label>Message</label>
-            <textarea id="message-input" name="" rows="12" cols="50"></textarea>
-            <p class="error" id="message-error">This field is required</p>
-          </div>
-
-          <div class="form-element">
-            <div class="checkbox-container">
-              <input type="checkbox" id="consent" name="consent" />
-              <label>I consent to being contacted by the team</label>
+            <div class="form-element">
+              <label for="message-input">Message</label>
+              <textarea
+                id="message-input"
+                name=""
+                rows="6"
+                cols="50"
+              ></textarea>
+              <p class="error" id="message-error">This field is required</p>
             </div>
-            <p class="error" id="consent-error">
-              To submit this form, please consent to being contacted
-            </p>
-          </div>
 
-          <button type="button" id="submit-button">Submit</button>
-
-          <div class="success-container">
-            <div class="success-message-title">
-              <img src="assets/images/icon-success-check.svg" alt="tick-icon" />
-              <p>Message Sent!</p>
+            <div class="form-element">
+              <div class="checkbox-container">
+                <input type="checkbox" id="consent" name="consent" />
+                <label for="consent"
+                  >I consent to being contacted by the team</label
+                >
+              </div>
+              <p class="error" id="consent-error">
+                To submit this form, please consent to being contacted
+              </p>
             </div>
-              <p id="success-message">Thanks for completing the form. We'll be in touch soon!</p>
-          </div>
-        </form>
+
+            <button type="button" id="submit-button">Submit</button>
+
+            <div class="success-container">
+              <div class="success-message-title">
+                <img
+                  src="assets/images/icon-success-check.svg"
+                  alt="tick-icon"
+                />
+                <p>Message Sent!</p>
+              </div>
+              <p id="success-message">
+                Thanks for completing the form. We'll be in touch soon!
+              </p>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io/profile/sherimin">Frontend Mentor</a>.
-      Coded by <a href="https://www.sherilu.com/">@sherimin</a>.
-    </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io/profile/sherimin"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://www.sherilu.com/">@sherimin</a>.
+      </div>
 
-    <script src="app.js"></script>
+      <script src="app.js"></script>
+    </main>
   </body>
 </html>
